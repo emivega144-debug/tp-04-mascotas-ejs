@@ -1,0 +1,28 @@
+<div class="cabecera-pagina">
+  <div>
+    <p class="etiqueta">CONOCÉ A TUS FUTUROS COMPAÑEROS</p>
+    <h1>Mascotas</h1>
+  </div>
+  <a class="boton" href="/mascotas/nueva">Registrar mascota</a>
+</div>
+
+<% if (mascotas.length === 0) { %>
+  <section class="estado">
+    <h2>Todavía no hay mascotas registradas</h2>
+    <p>Podés agregar la primera desde el formulario.</p>
+    <a class="boton" href="/mascotas/nueva">Agregar mascota</a>
+  </section>
+<% } else { %>
+  <section class="grilla" aria-label="Catálogo de mascotas">
+    <% mascotas.forEach((mascota) => { %>
+      <article class="tarjeta">
+        <img class="imagen-mascota" src="<%= mascota.imagen %>" alt="Ilustración de <%= mascota.nombre %>">
+        <span class="estado-etiqueta"><%= mascota.estado %></span>
+        <h2><%= mascota.nombre %></h2>
+        <p><strong>Especie:</strong> <%= mascota.especie %></p>
+        <p><strong>Edad:</strong> <%= mascota.edad %> año(s)</p>
+        <a class="enlace-detalle" href="/mascotas/<%= mascota.id %>">Ver detalles →</a>
+      </article>
+    <% }) %>
+  </section>
+<% } %>

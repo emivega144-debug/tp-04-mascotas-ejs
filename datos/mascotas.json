@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "Luna",
+    "especie": "Perro",
+    "edad": 5,
+    "descripcion": "Perra juguetona y cariñosa",
+    "estado": "En adopción",
+    "imagen": "/img/perro1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Michi",
+    "especie": "Gato",
+    "edad": 7,
+    "descripcion": "Gato curioso y tranquilo",
+    "estado": "Reservada",
+    "imagen": "/img/gato1.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Rocky",
+    "especie": "Perro",
+    "edad": 1,
+    "descripcion": "Perro guardián y protector",
+    "estado": "Adoptada",
+    "imagen": "/img/perro2.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Nieve",
+    "especie": "Gato",
+    "edad": 1,
+    "descripcion": "Gatita blanca muy cariñosa",
+    "estado": "En adopción",
+    "imagen": "/img/gato2.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Toby",
+    "especie": "Perro",
+    "edad": 3,
+    "descripcion": "Perro activo y juguetón",
+    "estado": "En adopción",
+    "imagen": "/img/perro3.jpg"
+  }
+]

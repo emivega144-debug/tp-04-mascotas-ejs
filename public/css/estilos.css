@@ -1,0 +1,238 @@
+root {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #292a27;
+  background: #f5f6f1;
+  line-height: 1.6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: #246b5b;
+  font-weight: 700;
+}
+a:hover {
+  color: #16483e;
+}
+.encabezado,
+.pie,
+.contenedor {
+  width: min(70rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid #d6ddd6;
+}
+.encabezado nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #292a27;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+.marca img {
+  flex: 0 0 auto;
+}
+.contenedor {
+  flex: 1;
+  padding-block: 3rem;
+}
+.hero,
+.estado,
+.detalle,
+.panel-formulario,
+.bloque-info {
+  max-width: 48rem;
+  padding: clamp(1.4rem, 4vw, 3.5rem);
+  border: 1px solid #d6ddd6;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 1rem 2.5rem rgb(40 60 45 / 7%);
+}
+.hero h1 {
+  max-width: 13ch;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.05;
+}
+.etiqueta {
+  margin-bottom: 0.5rem;
+  color: #9a542d;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.dato-destacado {
+  margin-block: 1.5rem;
+}
+.dato-destacado strong {
+  color: #246b5b;
+  font-size: 1.5rem;
+}
+.boton,
+button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 0.65rem;
+  background: #246b5b;
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boton:hover,
+button:hover {
+  background: #16483e;
+  color: white;
+}
+.bloque-info {
+  margin-top: 1.5rem;
+  box-shadow: none;
+}
+.cabecera-pagina {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.cabecera-pagina h1 {
+  margin-bottom: 0;
+}
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.2rem;
+}
+.tarjeta {
+  overflow: hidden;
+  border: 1px solid #d6ddd6;
+  border-radius: 1rem;
+  background: white;
+}
+.imagen-mascota {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  background: #e7f2ed;
+  padding: 1rem;
+}
+.tarjeta-contenido {
+  padding: 1.25rem;
+}
+.tarjeta h2 {
+  margin: 0.4rem 0;
+}
+.estado-etiqueta {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  background: #e7f2ed;
+  color: #20594c;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.enlace-detalle {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(9rem, 15rem) 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 60rem;
+}
+.detalle-imagen {
+  width: 100%;
+  border-radius: 1rem;
+  background: #e7f2ed;
+}
+.formulario {
+  display: grid;
+  gap: 0.7rem;
+}
+.formulario label {
+  font-weight: 800;
+}
+.formulario input,
+.formulario textarea,
+.formulario select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #aab7ad;
+  border-radius: 0.5rem;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+.formulario textarea {
+  resize: vertical;
+}
+.formulario button {
+  justify-self: start;
+  margin-top: 0.5rem;
+}
+.error {
+  padding: 0.75rem 1rem;
+  border-left: 0.3rem solid #b42318;
+  background: #fff0ed;
+  color: #7a271a;
+  font-weight: 700;
+}
+.pie {
+  padding-block: 1.25rem;
+  border-top: 1px solid #d6ddd6;
+  color: #646a63;
+}
+.pie p {
+  margin-bottom: 0;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e3b45d;
+  outline-offset: 3px;
+}
+@media (max-width: 42rem) {
+  .encabezado,
+  .cabecera-pagina {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .detalle {
+    grid-template-columns: 1fr;
+  }
+  .detalle-imagen {
+    max-width: 12rem;
+  }
+}
